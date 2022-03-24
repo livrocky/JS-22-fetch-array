@@ -51,6 +51,7 @@ function generateUsersList(usersArr) {
   //suksim cikla per arr ir juos desim i ol
   usersArr.forEach((uObj) => {
     const madeLi = makeOneLi(uObj.id, uObj.name, uObj.email, uObj.company.name);
+    console.log(madeLi);
     olEl.append(madeLi);
   });
   appEl.append(olEl);
