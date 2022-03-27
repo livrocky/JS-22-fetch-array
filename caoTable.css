@@ -8,4 +8,22 @@
 
 th {
   text-align: inherit;
+  padding: 15px;
+  font-size: 20px;
+}
+table,
+th,
+td {
+  border: 2px solid rgb(0, 0, 0);
+}
+table {
+  border-collapse: collapse;
+  width: 20%;
+}
+td {
+  height: 30px;
+  padding: 15px;
+}
+tbody:nth-child(even) {
+  background: rgb(229, 195, 245);
 }
