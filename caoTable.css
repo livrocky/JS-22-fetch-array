@@ -27,3 +27,7 @@ td {
 tbody:nth-child(even) {
   background: rgb(229, 195, 245);
 }
+
+img {
+  width: 60%;
+}
