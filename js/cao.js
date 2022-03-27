@@ -6,13 +6,13 @@
 const tableEl = document.createElement("table");
 tableEl.id = "mainTable";
 document.body.append(tableEl);
-console.log(tableEl);
+// console.log(tableEl);
 // parsisiusnciam products is API
 function getTable() {
   fetch("https://magnetic-melon-yam.glitch.me/")
     .then((resp) => resp.json())
     .then((data) => {
-      console.log("data===", data);
+      //   console.log("data===", data);
       data.forEach((userObject) => {
         mainTable.insertAdjacentHTML("beforeend", createSingleTable(userObject));
       });
@@ -38,11 +38,31 @@ tableHead5.textContent = "City";
 tableHead6.textContent = "fav_color";
 
 tableRow.append(tableHead1, tableHead2, tableHead3, tableHead4, tableHead5, tableHead6);
+
+//susikuriam checkbox html
+const checkbox = document.createElement("input");
+checkbox.type = "checkbox";
+checkbox.name = "vip";
+checkbox.id = "vip";
+const label = document.createElement("label");
+label.for = "vip";
+label.textContent = "VIP";
+document.body.prepend(checkbox);
+document.body.prepend(label);
+
+checkbox.addEventListener("change", function (userObject) {
+  if (this.checked) {
+    console.log("checkbox is checked");
+  } else {
+    console.log("checkbox is unchecked");
+  }
+});
+//ikeliam
 function createSingleTable(userObject) {
   return `
     <table>
     <td>${userObject.id}</td>
-    <td><img src="https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person.jpg"
+    <td><img src="${userObject.image}"
     alt="logo"></td>
     <td>${userObject.name.split(" ")[0]}</td>
     <td>${userObject.name.split(" ")[1]}</td>

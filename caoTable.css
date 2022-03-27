@@ -31,3 +31,7 @@ tbody:nth-child(even) {
 img {
   width: 60%;
 }
+
+label {
+  font-size: 20px;
+}
