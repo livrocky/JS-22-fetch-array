@@ -12,7 +12,7 @@ function getTable() {
   fetch("https://magnetic-melon-yam.glitch.me/")
     .then((resp) => resp.json())
     .then((data) => {
-      //   console.log("data===", data);
+      console.log("data===", data);
       data.forEach((userObject) => {
         mainTable.insertAdjacentHTML("beforeend", createSingleTable(userObject));
       });
